@@ -9,6 +9,8 @@ export default defineConfig(({ mode }) => {
   const proxyTarget = env.VITE_DEV_PROXY_TARGET || apiOrigin || "http://localhost:5000";
 
   return {
+    base: mode === "production" ? "/codetrack/" : "/",
+
     server: {
       host: "::",
       port: 5173,
@@ -20,7 +22,9 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+
     plugins: [mode === "development" && componentTagger()].filter(Boolean),
+
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
