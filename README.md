@@ -1,3 +1,4 @@
+[![GitHub Pages](https://github.com/akash3911/codetrack/actions/workflows/deploy.yaml/badge.svg)](https://github.com/akash3911/codetrack/actions/workflows/deploy.yaml)
 ## Quick Start
 
 ### Backend
